@@ -299,7 +299,9 @@ p > img {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 18%;
+    object-position: center top;
+    transform: scale(0.88);
+    transform-origin: center 28%;
     aspect-ratio: 1;
   }
 }
