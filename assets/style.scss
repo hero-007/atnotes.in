@@ -279,21 +279,28 @@ p > img {
 
 .site-avatar {
   float: left;
-  width: 70px;
-  height: 70px;
+  width: clamp(64px, 12vw, 80px);
+  height: clamp(64px, 12vw, 80px);
   margin-right: 15px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  aspect-ratio: 1;
 
   @include mobile {
     float: none;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 12px;
   }
 
   img {
-    border-radius: 5px;
-    width: 70px;
-    height: 70px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     object-fit: cover;
+    object-position: center 18%;
+    aspect-ratio: 1;
   }
 }
 
